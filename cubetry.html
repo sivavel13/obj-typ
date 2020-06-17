@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>cube </title>
+    <style>
+        #container{
+            height:100px;
+            width:100px;
+            margin:400px;
+            perspective:500px;
+        }
+        #cube
+        {
+            height:100px;
+            width:100px;
+            transform-style: preserve-3d;
+            animation: rotatation  4s infinite;
+        }
+        .cube-side
+        {
+            height:inherit;
+            width:inherit;
+            position:absolute;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #front
+        {
+            transform:translateZ(50px);
+            background:yellow;
+        }
+        #back
+        {
+            transform:translateZ(-50px) rotateY(180deg);
+            background:darkturquoise;
+        
+        }
+        #top
+        {
+            transform:translateY(-50px) rotateX(-90deg);
+            background:yellow;
+        
+        }
+        #bottom
+        {
+            transform:translateY(50px) rotateX(90deg);
+            background:purple;
+        
+        }
+        #left
+        {
+            transform:translateX(-50px) rotateY(-90deg);
+            background:springgreen;
+            
+        }
+        #right
+        {
+            transform:translateX(50px) rotateY(90deg);
+            background:springgreen;
+        
+        }
+        @keyframes rotatation{
+            0%{
+                transform:rotate(0deg);
+            }
+            25%{
+                transform:rotatey(-90deg);
+            }
+            50%{
+                transform:rotatey(-180deg);
+            }
+            75%{
+                transform:rotatey(90deg);
+            }
+            100%{
+                transform:rotatey(-360deg);
+            }
+        }  
+        #front,#back,#top,#right
+        {
+            text-align: center;
+            color:black;          
+        }  
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="cube">
+            <div class="cube-side"id="front">BEE</div>
+            <div class="cube-side"id="back">Digital Marketing</div>
+            <div class="cube-side"id="top">Digital Marketing</div>
+            <div class="cube-side"id="bottom"></div>
+            <div class="cube-side"id="right">HOME</div>
+            <div class="cube-side"id="left"></div>
+        </div>
+    </div>
+</body>
+</html>

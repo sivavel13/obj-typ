@@ -1,0 +1,49 @@
+<<html>
+    <head>
+        <title></title>
+        <style>
+            .yml--intro-logo {
+	position: absolute;
+	margin: -40px;
+	width: 80px;
+	height: 80px;
+	background: black;
+}
+
+.yml--intro-logo:nth-child(1) { /* Y */
+	border: none;
+	transform: rotateY(0deg) translateZ(40px);
+}
+.yml--intro-logo:nth-child(2) { /* M */
+	border: solid 2px white;
+	transform: rotateY(90deg) translateZ(40px);
+}
+.yml--intro-logo:nth-child(3) { /* L */
+	border: solid 2px white;
+	transform: rotateY(180deg) translateZ(40px);
+}
+.yml--intro-logo:nth-child(4) { /* Empty */
+	background: white;
+	transform: rotateY(270deg) translateZ(40px);
+}
+.yml--intro-logo:nth-child(5) { /* Empty */
+	background: white;
+	transform: rotateX(-90deg) rotateZ(90deg) translateZ(40px);
+}
+.yml--intro-logo:nth-child(6) { /* White */
+	background: white;
+	transform: rotateX(90deg) translateZ(40px);
+}
+
+.yml--intro-logo svg path {
+	fill: white;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="yml--intro-logo">
+            y
+        </div>
+    </body>
+    </html>
